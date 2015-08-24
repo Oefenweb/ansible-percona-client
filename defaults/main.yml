@@ -1,0 +1,4 @@
+# defaults file for percona-client
+---
+percona_client_version: 5.5
+percona_client_install: []

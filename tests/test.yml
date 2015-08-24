@@ -1,0 +1,6 @@
+# test file for percona-client
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ../../
