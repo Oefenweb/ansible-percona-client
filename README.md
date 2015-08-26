@@ -13,6 +13,16 @@ None
 * `percona_client_version`: [default: `5.5`]: Version to install
 * `percona_client_install`: [default: `[]`]: Additional packages to install
 
+* `percona_client_my_cnf_files`: [default: `[]`]: `.my.cnf` files to configure
+* `percona_client_my_cnf_files.{n}.dest`: [optional, default: `~owner/.my.cnf'`]: The remote path of the file to copy
+* `percona_client_my_cnf_files.{n}.owner`: [required]: The name of the user that should own the file
+* `percona_client_my_cnf_files.{n}.group`: [optional, default: `owner`]: The name of the group that should own the file
+* `percona_client_my_cnf_files.{n}.mode`: [optional, default: `0600`]: The mode of the file
+* `percona_client_my_cnf_files.{n}.login_host`: [optional, default: `localhost`]: The host running the server
+* `percona_client_my_cnf_files.{n}.login_port`: [optional, default: `3306`]: The port of the server
+* `percona_client_my_cnf_files.{n}.login_user`: [optional, default: `owner`]: The username used to authenticate with
+* `percona_client_my_cnf_files.{n}.login_password`: [required]: The password used to authenticate with
+
 ## Dependencies
 
 None
@@ -21,13 +31,37 @@ None
 
 * `percona-server` ([see](https://github.com/Oefenweb/ansible-percona-server)
 
-#### Example
+#### Example(s)
+
+##### Simple
 
 ```yaml
 ---
 - hosts: all
   roles:
     - percona-client
+```
+
+##### With .my.cnf file(s)
+
+```yaml
+---
+- hosts: all
+  roles:
+    - percona-client
+  vars:
+    percona_client_my_cnf_files:
+      - dest: '~root/.my.cnf'
+        owner: root
+        group: root
+        mode: '0600'
+        login_host: localhost
+        login_port: 3306
+        login_user: root
+        login_password: 'pw4Root'
+
+      - owner: vagrant
+        login_password: 'pw4Vagrant'
 ```
 
 #### License

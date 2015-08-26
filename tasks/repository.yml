@@ -1,25 +1,28 @@
 # tasks file for percona-client
 ---
-- name: add public key
+- name: repository | add public key
   apt_key:
     id: CD2EFD2A
     url: http://www.percona.com/downloads/RPM-GPG-KEY-percona
     state: present
-  tags: [configuration, percona-client, percona-client-public-key]
+  tags:
+    - percona-client-repository-public-key
 
-- name: add percona repository
+- name: repository | add
   apt_repository:
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
     update_cache: yes
   with_items: percona_client_repositories
-  tags: [configuration, percona-client, percona-client-repository]
+  tags:
+    - percona-client-repository-add
 
-- name: apt-pin packages
+- name: repository | apt-pin packages
   copy:
     src: etc/apt/preferences.d/00percona.pref
     dest: /etc/apt/preferences.d/00percona.pref
     owner: root
     group: root
     mode: 0644
-  tags: [configuration, percona-client, percona-client-apt-pin]
+  tags:
+    - percona-client-repository-apt-pin
