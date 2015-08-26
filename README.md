@@ -1,8 +1,8 @@
 ## percona-client 
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-percona-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-percona-client)  [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/list#/roles/4823)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-percona-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-percona-client) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/list#/roles/4823)
 
-Set up a percona-server client in Debian-like systems.
+Set up a [percona-server](https://www.percona.com/software/mysql-database/percona-server) client in Debian-like systems.
 
 #### Requirements
 
@@ -16,6 +16,10 @@ None
 ## Dependencies
 
 None
+
+## Recommended
+
+* `percona-server` ([see](https://github.com/Oefenweb/ansible-percona-server)
 
 #### Example
 
