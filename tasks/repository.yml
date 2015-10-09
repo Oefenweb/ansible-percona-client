@@ -12,7 +12,7 @@
   apt_repository:
     repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
     state: present
-    update_cache: yes
+    update_cache: true
   with_items: percona_client_repositories
   tags:
     - percona-client-repository-add
