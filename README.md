@@ -29,7 +29,7 @@ None
 
 ## Recommended
 
-* `percona-server` ([see](https://github.com/Oefenweb/ansible-percona-server)
+* `percona-server` ([see](https://github.com/Oefenweb/ansible-percona-server))
 
 #### Example(s)
 
