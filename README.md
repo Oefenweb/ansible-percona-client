@@ -23,6 +23,8 @@ None
 * `percona_client_my_cnf_files.{n}.login_user`: [optional, default: `owner`]: The username used to authenticate with
 * `percona_client_my_cnf_files.{n}.login_password`: [required]: The password used to authenticate with
 
+* `percona_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection
+
 ## Dependencies
 
 None
