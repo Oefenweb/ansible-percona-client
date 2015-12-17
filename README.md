@@ -25,6 +25,18 @@ None
 
 * `percona_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection
 
+* `percona_client_my_cnf_files.{n}.ssl_ca`: [optional, default: `ca-cert`]: The identifier of the ca certificate file in ssl map
+* `percona_client_my_cnf_files.{n}.ssl_cert`: [optional, default: `client-cert`]: The identifier of the ssl certificate file in ssl map
+* `percona_client_my_cnf_files.{n}.ssl_key`: [optional, default: `client-key`]: The identifier of the ssl key file in ssl map
+
+* `percona_client_ssl_map`: [default: `{}`]: SSL declarations
+* `percona_client_ssl_map.key`: [required]: The identifier of the file (e.g. `ca-cert`)
+* `percona_client_ssl_map.key.src`: [required]: The local path of the file to copy, can be absolute or relative (e.g. `../../../files/percona-client/etc/mysql/ca-cert.pem`)
+* `percona_client_ssl_map.key.dest`: [required]: The remote path of the file to copy (e.g. `/etc/mysql/ca-cert.pem`)
+* `percona_client_ssl_map.key.owner`: [optional, default `root`]: The name of the user that should own the file
+* `percona_client_ssl_map.key.group`: [optional, default `mysql`]:The name of the group that should own the file
+* `percona_client_ssl_map.key.mode`: [optional, default `0640`]: The mode of the file
+
 ## Dependencies
 
 None

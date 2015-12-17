@@ -9,3 +9,17 @@ password = '{{ item.login_password }}'
 {% if item.ssl is defined %}
 ssl = {{ 1 if item.ssl else 0 }}
 {% endif %}
+
+{% if percona_server_ssl_map %}
+
+{% if item.ssl_ca is defined and percona_client_ssl_map[item.ssl_ca]['dest'] is defined %}
+ssl_cert = {{ percona_client_ssl_map[item.ssl_ca]['dest'] }}
+{% endif %}
+{% if item.ssl_cert is defined and percona_client_ssl_map[item.ssl_cert]['dest'] is defined %}
+ssl_cert = {{ percona_client_ssl_map[item.ssl_cert]['dest'] }}
+{% endif %}
+{% if item.ssl_key is defined and percona_client_ssl_map[item.ssl_key]['dest'] is defined %}
+ssl_cert = {{ percona_client_ssl_map[item.ssl_key]['dest'] }}
+{% endif %}
+
+{% endif %}
