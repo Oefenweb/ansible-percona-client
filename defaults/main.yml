@@ -3,3 +3,4 @@
 percona_client_version: 5.5
 percona_client_install: []
 percona_client_my_cnf_files: []
+percona_client_ssl_map: {}
