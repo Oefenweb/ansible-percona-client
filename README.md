@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `percona_client_version`: [default: `5.5`]: Version to install
+* `percona_client_version`: [default: `5.5`]: Version to install (e.g. `5.6`)
 * `percona_client_install`: [default: `[]`]: Additional packages to install
 
 * `percona_client_my_cnf_files`: [default: `[]`]: `.my.cnf` files to configure
