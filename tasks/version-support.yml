@@ -1,0 +1,8 @@
+# tasks file for percona-client
+---
+- name: version support | check
+  fail:
+    msg: "Percona client version {{ percona_client_version }} is not supported"
+  when: percona_client_version not in percona_client_versions_supported
+  tags:
+    - percona-client-version-support-check

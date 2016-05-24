@@ -1,5 +1,11 @@
 # tasks file for percona-client
 ---
+- include: version-support.yml
+  tags:
+    - configuration
+    - percona-client
+    - percona-client-version-support
+
 - include: repository.yml
   tags:
     - configuration
