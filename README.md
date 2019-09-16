@@ -1,6 +1,7 @@
 ## percona-client 
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-percona-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-percona-client) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/percona-client)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-percona-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-percona-client)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/percona-client)
 
 Set up a [percona-server](https://www.percona.com/software/mysql-database/percona-server) client in Debian-like systems.
 
@@ -23,7 +24,8 @@ None
 * `percona_client_my_cnf_files.{n}.login_user`: [optional, default: `owner`]: The username used to authenticate with
 * `percona_client_my_cnf_files.{n}.login_password`: [required]: The password used to authenticate with
 
-* `percona_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection
+* `percona_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection (deprecated as of `5.7.11` and is removed in `8.0`)
+* `percona_client_my_cnf_files.{n}.ssl_mode`: [optional]: Specifies the desired security state of the connection to the server (e.g. `VERIFY_CA`)
 
 * `percona_client_my_cnf_files.{n}.ssl_ca`: [optional, default: `ca-cert`]: The identifier of the ca certificate file in ssl map
 * `percona_client_my_cnf_files.{n}.ssl_cert`: [optional, default: `client-cert`]: The identifier of the ssl certificate file in ssl map
