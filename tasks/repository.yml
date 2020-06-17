@@ -7,7 +7,9 @@
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  when: ansible_distribution == 'Debian' and ansible_distribution_version is version('9', '>=')
+  when:
+    - ansible_distribution == 'Debian'
+    - ansible_distribution_version is version('9', '>=')
   tags:
     - percona-client-repository-install
     - percona-client-repository-install-dependencies
