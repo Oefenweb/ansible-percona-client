@@ -7,10 +7,10 @@ percona_client_versions_supported:
 
 percona_client_repositories:
   - type: deb
-    url: "http://repo.percona.com/apt {{ ansible_lsb.codename }}"
+    url: "http://repo.percona.com/apt {{ ansible_distribution_release }}"
     component: main
   - type: deb-src
-    url: "http://repo.percona.com/apt {{ ansible_lsb.codename }}"
+    url: "http://repo.percona.com/apt {{ ansible_distribution_release }}"
     component: main
 
 percona_client_dependencies_pre:
