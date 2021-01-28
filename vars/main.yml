@@ -13,5 +13,9 @@ percona_client_repositories:
     url: "http://repo.percona.com/apt {{ ansible_lsb.codename }}"
     component: main
 
+percona_client_dependencies_pre:
+  - software-properties-common
+  - dirmngr
+
 percona_client_dependencies:
   - "percona-server-client-{{ percona_client_version }}"
