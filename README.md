@@ -12,7 +12,7 @@ Set up a [percona-server](https://www.percona.com/software/mysql-database/percon
 
 #### Variables
 
-* `percona_client_version`: [default: `5.6`]: Version to install (e.g. `5.6`)
+* `percona_client_version`: [default: `5.6`]: Version to install (e.g. `5.7`)
 * `percona_client_install`: [default: `[]`]: Additional packages to install
 
 * `percona_client_my_cnf_files`: [default: `[]`]: `.my.cnf` files to configure
