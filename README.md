@@ -1,17 +1,18 @@
-## percona-client 
+## percona-client
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-percona-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-percona-client)
+[![CI](https://github.com/Oefenweb/ansible-percona-client/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-percona-client/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/percona-client)
 
 Set up a [percona-server](https://www.percona.com/software/mysql-database/percona-server) client in Debian-like systems.
 
 #### Requirements
 
-None
+* `software-properties-common` (will be installed)
+* `dirmngr` (will be installed)
 
 #### Variables
 
-* `percona_client_version`: [default: `5.6`]: Version to install (e.g. `5.6`)
+* `percona_client_version`: [default: `5.6`]: Version to install (e.g. `5.7`)
 * `percona_client_install`: [default: `[]`]: Additional packages to install
 
 * `percona_client_my_cnf_files`: [default: `[]`]: `.my.cnf` files to configure
