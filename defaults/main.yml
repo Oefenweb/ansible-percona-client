@@ -1,4 +1,4 @@
-# defaults file for percona-client
+# defaults file
 ---
 percona_client_version: 5.7
 percona_client_install: []

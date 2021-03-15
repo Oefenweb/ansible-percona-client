@@ -1,4 +1,4 @@
-# vars file for percona-client
+# vars file
 ---
 percona_client_versions_supported:
   - '5.5'
