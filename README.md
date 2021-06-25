@@ -1,7 +1,7 @@
 ## percona-client
 
 [![CI](https://github.com/Oefenweb/ansible-percona-client/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-percona-client/actions?query=workflow%3ACI)
-[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/percona-client)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-percona--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/percona_client)
 
 Set up a [percona-server](https://www.percona.com/software/mysql-database/percona-server) client in Debian-like systems.
 
