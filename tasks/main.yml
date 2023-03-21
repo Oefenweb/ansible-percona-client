@@ -1,24 +1,28 @@
 # tasks file
 ---
-- ansible.builtin.import_tasks: version-support.yml
+- name: version support
+  ansible.builtin.import_tasks: version-support.yml
   tags:
     - configuration
     - percona-client
     - percona-client-version-support
 
-- ansible.builtin.import_tasks: repository.yml
+- name: repository
+  ansible.builtin.import_tasks: repository.yml
   tags:
     - configuration
     - percona-client
     - percona-client-repository
 
-- ansible.builtin.import_tasks: install.yml
+- name: install
+  ansible.builtin.import_tasks: install.yml
   tags:
     - configuration
     - percona-client
     - percona-client-install
 
-- ansible.builtin.import_tasks: configure.yml
+- name: configure
+  ansible.builtin.import_tasks: configure.yml
   tags:
     - configuration
     - percona-client
