@@ -1,4 +1,4 @@
-# tasks file for percona-client
+# tasks file
 ---
 - include: version-support.yml
   tags:
