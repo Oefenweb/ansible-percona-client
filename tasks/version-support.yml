@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: version support | check
-  fail:
+  ansible.builtin.fail:
     msg: "Percona client version {{ percona_client_version }} is not supported"
   when: percona_client_version | string not in percona_client_versions_supported
   tags:
