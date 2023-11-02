@@ -56,7 +56,7 @@ None
 ---
 - hosts: all
   roles:
-    - percona-client
+    - oefenweb.percona-client
 ```
 
 ##### With .my.cnf file(s)
@@ -65,7 +65,7 @@ None
 ---
 - hosts: all
   roles:
-    - percona-client
+    - oefenweb.percona-client
   vars:
     percona_client_my_cnf_files:
       - dest: '~root/.my.cnf'
