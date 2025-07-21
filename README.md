@@ -9,10 +9,11 @@ Set up a [percona-server](https://www.percona.com/software/mysql-database/percon
 
 * `software-properties-common` (will be installed)
 * `dirmngr` (will be installed)
+* `apt-transport-https` (will be installed)
 
 #### Variables
 
-* `percona_client_version`: [default: `5.6`]: Version to install (e.g. `5.7`)
+* `percona_client_version`: [default: `5.7`]: Version to install (e.g. `5.7`, `8.0`)
 * `percona_client_install`: [default: `[]`]: Additional packages to install
 
 * `percona_client_my_cnf_files`: [default: `[]`]: `.my.cnf` files to configure
@@ -25,7 +26,7 @@ Set up a [percona-server](https://www.percona.com/software/mysql-database/percon
 * `percona_client_my_cnf_files.{n}.login_user`: [optional, default: `owner`]: The username used to authenticate with
 * `percona_client_my_cnf_files.{n}.login_password`: [required]: The password used to authenticate with
 
-* `percona_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection (deprecated as of `5.7.11` and is removed in `8.0`)
+* `percona_client_my_cnf_files.{n}.ssl`: [optional]: Whether to use SSL when connection (deprecated as of `5.7.11` and is removed in `8.0`)
 * `percona_client_my_cnf_files.{n}.ssl_mode`: [optional]: Specifies the desired security state of the connection to the server (e.g. `VERIFY_CA`)
 
 * `percona_client_my_cnf_files.{n}.ssl_ca`: [optional, default: `ca-cert`]: The identifier of the ca certificate file in ssl map
