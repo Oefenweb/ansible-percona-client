@@ -1,7 +1,11 @@
 # test file
 ---
-- hosts: localhost
+- name: converge
+  hosts: localhost
   connection: local
   become: true
+  pre_tasks:
+    - name: include vars
+      ansible.builtin.include_vars: "{{ playbook_dir }}/vars/main.yml"
   roles:
     - ../../

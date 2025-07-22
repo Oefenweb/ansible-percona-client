@@ -1,7 +1,11 @@
 # test file
 ---
-- hosts: all
+- name: converge
+  hosts: all
   remote_user: vagrant
   become: true
+  pre_tasks:
+    - name: include vars
+      ansible.builtin.include_vars: "{{ playbook_dir }}/vars/main.yml"
   roles:
     - ../../
