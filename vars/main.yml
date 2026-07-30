@@ -11,33 +11,33 @@ percona_client_keyring_dst: /usr/share/keyrings/percona.gpg
 
 percona_client_repositories_5:
   - type: "deb [signed-by={{ percona_client_keyring_dst }}]"
-    url: "http://repo.percona.com/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/apt {{ ansible_facts['distribution_release'] }}"
     component: main
   - type: "deb-src [signed-by={{ percona_client_keyring_dst }}]"
-    url: "http://repo.percona.com/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/apt {{ ansible_facts['distribution_release'] }}"
     component: main
   - type: deb
-    url: "http://repo.percona.com/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/apt {{ ansible_facts['distribution_release'] }}"
     component: main
     state: absent
   - type: deb-src
-    url: "http://repo.percona.com/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/apt {{ ansible_facts['distribution_release'] }}"
     component: main
     state: absent
 
 percona_client_repositories_8:
   - type: "deb [signed-by={{ percona_client_keyring_dst }}]"
-    url: "http://repo.percona.com/ps-80/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/ps-80/apt {{ ansible_facts['distribution_release'] }}"
     component: main
   - type: "deb-src [signed-by={{ percona_client_keyring_dst }}]"
-    url: "http://repo.percona.com/ps-80/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/ps-80/apt {{ ansible_facts['distribution_release'] }}"
     component: main
   - type: deb
-    url: "http://repo.percona.com/ps-80/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/ps-80/apt {{ ansible_facts['distribution_release'] }}"
     component: main
     state: absent
   - type: deb-src
-    url: "http://repo.percona.com/ps-80/apt {{ ansible_distribution_release }}"
+    url: "http://repo.percona.com/ps-80/apt {{ ansible_facts['distribution_release'] }}"
     component: main
     state: absent
 
